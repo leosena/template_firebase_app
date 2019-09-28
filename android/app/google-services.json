@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "883380051967",
+    "firebase_url": "https://databse-902aa.firebaseio.com",
+    "project_id": "databse-902aa",
+    "storage_bucket": "databse-902aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883380051967:android:ae008eb83aca721edd51ca",
+        "android_client_info": {
+          "package_name": "baskadagalera.pontenova.leocunha.baskadagalera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883380051967-t18b8b0s0i3tsqkgi9t0ni7tkmtticfo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfa1uyrOz2GamGpwHwFJWdqSzcFoSuYcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883380051967-t18b8b0s0i3tsqkgi9t0ni7tkmtticfo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883380051967:android:fa389dbe60da92b2dd51ca",
+        "android_client_info": {
+          "package_name": "com.leocunha.campdagalera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883380051967-t18b8b0s0i3tsqkgi9t0ni7tkmtticfo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfa1uyrOz2GamGpwHwFJWdqSzcFoSuYcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883380051967-t18b8b0s0i3tsqkgi9t0ni7tkmtticfo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
