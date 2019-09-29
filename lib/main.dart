@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import "package:baska_da_galera/ui/screens/walk_screen.dart";
 import 'package:baska_da_galera/ui/screens/root_screen.dart';
 import 'package:baska_da_galera/ui/screens/sign_in_screen.dart';
 import 'package:baska_da_galera/ui/screens/sign_up_screen.dart';
@@ -21,10 +20,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Baska da Galera',
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
-        '/walkthrough': (BuildContext context) => new WalkthroughScreen(),
         '/root': (BuildContext context) => new RootScreen(),
         '/signin': (BuildContext context) => new SignInScreen(),
         '/signup': (BuildContext context) => new SignUpScreen(),
@@ -34,16 +32,8 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         primarySwatch: Colors.grey,
       ),
-      home: _handleCurrentScreen(),
+      home: RootScreen(),
     );
   }
 
-  Widget _handleCurrentScreen() {
-    bool seen = (prefs.getBool('seen') ?? false);
-    if (seen) {
-      return new RootScreen();
-    } else {
-      return new WalkthroughScreen(prefs: prefs);
-    }
-  }
 }

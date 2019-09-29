@@ -1,3 +1,5 @@
+import 'package:baska_da_galera/ui/widgets/custom_bar.dart';
+import 'package:baska_da_galera/ui/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:baska_da_galera/business/auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -14,6 +16,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
+
   @override
   void initState() {
     super.initState();
@@ -23,32 +26,16 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       key: _scaffoldKey,
       appBar: new AppBar(
-        elevation: 0.5,
-        leading: new IconButton(
-            icon: new Icon(Icons.menu),
-            onPressed: () => _scaffoldKey.currentState.openDrawer()),
-        title: Text("Home"),
-        centerTitle: true,
+        title: Text("Baska da Galera"),
+
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Drawer Header'),
-            ),
-            ListTile(
-              title: Text('Log Out'),
-              onTap: () {
-                _logOut();
-                _scaffoldKey.currentState.openEndDrawer();
-              },
-            ),
-          ],
-        ),
-      ),
+
+      endDrawer: new drawerMenu("teeste"),
+
+
       body: StreamBuilder(
         stream: Auth.getUser(widget.firebaseUser.uid),
         builder: (BuildContext context, AsyncSnapshot<User> snapshot) {

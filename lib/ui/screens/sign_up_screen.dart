@@ -14,11 +14,11 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _fullname = new TextEditingController();
-  final TextEditingController _number = new TextEditingController();
+  //final TextEditingController _number = new TextEditingController();
   final TextEditingController _email = new TextEditingController();
   final TextEditingController _password = new TextEditingController();
   CustomTextField _nameField;
-  CustomTextField _phoneField;
+  //CustomTextField _phoneField;
   CustomTextField _emailField;
   CustomTextField _passwordField;
   bool _blackVisible = false;
@@ -40,6 +40,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       hint: "Full Name",
       validator: Validator.validateName,
     );
+    /*
     _phoneField = new CustomTextField(
       baseColor: Colors.grey,
       borderColor: Colors.grey[400],
@@ -49,6 +50,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
       validator: Validator.validateNumber,
       inputType: TextInputType.number,
     );
+
+     */
     _emailField = new CustomTextField(
       baseColor: Colors.grey,
       borderColor: Colors.grey[400],
@@ -102,11 +105,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           EdgeInsets.only(top: 20.0, left: 15.0, right: 15.0),
                       child: _nameField,
                     ),
+                    /*
                     Padding(
                       padding:
                           EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
                       child: _phoneField,
                     ),
+
+                     */
                     Padding(
                       padding:
                           EdgeInsets.only(top: 10.0, left: 15.0, right: 15.0),
@@ -129,7 +135,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           _signUp(
                               fullname: _fullname.text,
                               email: _email.text,
-                              number: _number.text,
+                              //number: _number.text,
                               password: _password.text);
                         },
                         splashColor: Colors.black12,
@@ -183,11 +189,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
       BuildContext context}) async {
     if (Validator.validateName(fullname) &&
         Validator.validateEmail(email) &&
-        Validator.validateNumber(number) &&
+        //Validator.validateNumber(number) &&
         Validator.validatePassword(password)) {
       try {
         SystemChannels.textInput.invokeMethod('TextInput.hide');
         _changeBlackVisible();
+
+        //TODO Aqui!
+
         await Auth.signUp(email, password).then((uID) {
           Auth.addUser(new User(
               userID: uID,

@@ -106,6 +106,8 @@ class _SignInScreenState extends State<SignInScreen> {
                         color: Color.fromRGBO(212, 20, 15, 1.0),
                       ),
                     ),
+
+                    /*
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Text(
@@ -138,6 +140,8 @@ class _SignInScreenState extends State<SignInScreen> {
                         color: Color.fromRGBO(59, 89, 152, 1.0),
                       ),
                     ),
+
+                     */
                   ],
                 ),
                 SafeArea(
@@ -196,6 +200,7 @@ class _SignInScreenState extends State<SignInScreen> {
     }
   }
 
+  /*
   void _facebookLogin({BuildContext context}) async {
     try {
       SystemChannels.textInput.invokeMethod('TextInput.hide');
@@ -232,6 +237,8 @@ class _SignInScreenState extends State<SignInScreen> {
       );
     }
   }
+
+   */
 
   void _showErrorAlert({String title, String content, VoidCallback onPressed}) {
     showDialog(
